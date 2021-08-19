@@ -36,3 +36,18 @@ custom_table <- readHTMLTable(population_url,which = 6)
 #datos = readHTMLTable("<<pon aquí tu URL>>")
 datos = readHTMLTable("www.minem.gob.pe/_estadisticaSector.php?idSector=1&idCategoria=10")
 View(datos)
+
+#Json
+#library(jsonlite)
+dot.1 <- fromJSON("~/Roberto/RCursoML_Udemy/RCursoML/r-course/data/tema1/students.json")
+dot.2 <- fromJSON("~/Roberto/RCursoML_Udemy/RCursoML/r-course/data/tema1/student-courses.json") 
+#library(curl)
+url <- "http://www.floatrates.com/daily/usd.json"
+currencies <- fromJSON(url)
+
+currencies[["eur"]][["name"]]
+currencies[[c(1:1),]][[c(1:1),]]
+currencie.data <- currencies$brl
+currencie.data[,1:3]
+
+dot.1[c(2,5,6),]
